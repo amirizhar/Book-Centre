@@ -1,0 +1,7 @@
+{
+  "name": "book-centre",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
