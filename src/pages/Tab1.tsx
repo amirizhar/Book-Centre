@@ -72,9 +72,6 @@ const Tab1: React.FC = () => {
             </div>
           </div>
         </div>
-
-Hello world
-        
         {/* <ExploreContainer name="Books" /> */}
       </IonContent>
     </IonPage>
