@@ -1,4 +1,5 @@
 import { IonButton, IonCheckbox, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { text } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
 
@@ -29,21 +30,21 @@ const Tab3: React.FC = () => {
           </IonItem>
 
           <IonItem>
-              <IonLabel position="floating">Store</IonLabel>
+              {/* <IonLabel position="floating">Store</IonLabel> */}
                 <IonCheckbox slot="start"></IonCheckbox>
-                <IonLabel>MPH</IonLabel>
+                <IonLabel style={{textAlign: 'left'}}>MPH</IonLabel>
               </IonItem>
 
               <IonItem>
-              <IonLabel position="floating">Store</IonLabel>
+              {/* <IonLabel position="floating">Store</IonLabel> */}
                 <IonCheckbox slot="start"></IonCheckbox>
-                <IonLabel>Kinokuniya</IonLabel>
+                <IonLabel style={{textAlign: 'left'}}>Kinokuniya</IonLabel>
               </IonItem>
 
               <IonItem>
-              <IonLabel position="floating">Store</IonLabel>
+              {/* <IonLabel position="floating">Store</IonLabel> */}
                 <IonCheckbox slot="start"></IonCheckbox>
-                <IonLabel>Popular</IonLabel>
+                <IonLabel style={{textAlign: 'left'}}>Popular</IonLabel>
               </IonItem>
 
           <IonItem>
