@@ -15,7 +15,6 @@ import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
-import Tab5 from './pages/Tab5';
 import Register from './pages/Register';
 
 /* Core CSS required for Ionic components to work properly */
@@ -62,14 +61,6 @@ const App: React.FC = () => (
             <Tab4 />
           </Route>
 
-          <Route path="/Login">
-            <Tab5 />
-          </Route>
-
-          <Route path="/Register">
-            <Register />
-          </Route>
-
           {/* redirect to main page */}
           <Route exact path="/">
             <Redirect to="/Main" />
@@ -96,11 +87,6 @@ const App: React.FC = () => (
           <IonTabButton tab="tab4" href="/tab4">
             <IonIcon icon={informationCircle} />
             <IonLabel>About</IonLabel>
-          </IonTabButton>
-
-          <IonTabButton tab="Login" href="/Login">
-            <IonIcon icon={people} />
-            <IonLabel>Admin</IonLabel>
           </IonTabButton>
 
         </IonTabBar>
