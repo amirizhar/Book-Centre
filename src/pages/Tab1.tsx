@@ -3,12 +3,25 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
 // Import Book Categories Icon
-import comic from './images/Comics.png';
 import business from './images/Business.png';
-import cooking from './images/Cooking.jpg';
 import kids from './images/Kids.jpg';
-import medical from './images/Medical.png';
-import selfhelp from './images/SelfHelp.jpg';
+import comic from './images/Comics.png';
+
+import novel from './images/novels.png';
+import family from './images/family.jpeg';
+import language from './images/language.jpeg';
+
+import religion from './images/Religion.png';
+import computer from './images/ComputerAndTech.jpg';
+import art from './images/ArtsAndMusic.png';
+
+import history from './images/History.png';
+import health from './images/HealthAndFitness.png';
+import sport from './images/Sport.png';
+
+// import cooking from './images/Cooking.jpg';
+// import medical from './images/Medical.png';
+// import selfhelp from './images/SelfHelp.jpg';
 
 const Tab1: React.FC = () => {
   return (
@@ -25,53 +38,118 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <div id="container">
+
+          {/* ------------------------------Row 1------------------------------------ */}
+
           <div className="row">
             <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
-            <p><a type="text">
-            <img src={comic} alt="Comics"/></a></p>
-            <p style={{textAlign: 'center', margin: 25, fontSize:10}}><b>COMICS</b></p>
-            </div>
-
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
               <p><a type="text">
-              <img src={kids} alt="Comics"/></a></p>
+              <img src={business} alt="Business & Economics"/></a></p>
+              <p style={{textAlign: 'center', fontSize:10}}><b>Business & Economics</b></p>
             </div>
 
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
+            <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
               <p><a type="text">
-              <img src={medical} alt="Comics"/></a></p>
+              <img src={kids} alt="Children"/></a></p>
+              <p style={{textAlign: 'center', fontSize:10}}><b>Childrens</b></p>
             </div>
 
-
-            <div className="row">
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
-              <p><a type="text">
-              <img src={selfhelp} alt="Comics"/></a></p>
-            </div>
-
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
-            <p><a type="text">
-            <img src={comic} alt="Comics"/></a></p>
-            </div>
-
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
-              <p><a type="text">
-              <img src={business} alt="Business"/></a></p>
-              <p style={{textAlign: 'center', margin: 25, fontSize:10}}><b>BUSINESS</b></p>
-            </div>
-            </div>
-
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
-              <p><a type="text">
-              <img src={cooking} alt="Cooking"/></a></p>
-            </div>
-
-            <div className="column" style={{textAlign: 'justify', margin: 20}}>
+            <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
               <p><a type="text">
               <img src={comic} alt="Comics"/></a></p>
+              <p style={{textAlign: 'center', fontSize:10}}><b>Comic & Graphics</b></p>
             </div>
           </div>
-        </div>
+
+            {/* ------------------------------Row 2------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={novel} alt="Novels"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Novels</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={family} alt="Family & Relationships"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Family & Relationships</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={language} alt="Language"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Language</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 3------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={religion} alt="Religion"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Religion</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={computer} alt="Computer & Internet"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Computer & Internet</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={art} alt="Arts"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Design & Arts</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 4------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={history} alt="History & Politics"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>History & Politics</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={health} alt="Health & Well-being"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Health & Well-being</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={sport} alt="Sport"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Sport</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 5------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={history} alt="History & Politics"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>History & Politics</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={health} alt="Health & Well-being"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Health & Well-being</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={sport} alt="Sport"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Sport</b></p>
+              </div>
+            </div>
+
+          </div>
         {/* <ExploreContainer name="Books" /> */}
       </IonContent>
     </IonPage>
