@@ -27,8 +27,20 @@ import food from './images/food.png';
 import selfEnrichment from './images/self-enrichment.png';
 import localStudy from './images/localStudy.png';
 
+import textbooks from './images/textbook.png';
+import languageExam from './images/languageExam.jpeg';
+import internationalExam from './images/internationalExam.jpeg';
 
-// import cooking from './images/Cooking.jpg';
+import fiction from './images/fiction.png';
+import nonFiction from './images/non-fiction.png';
+import chineseBook from './images/chineseBook.png';
+
+import japaneseBook from './images/japaneseBook.png';
+import lifestyle from './images/lifestyle.png';
+import others from './images/others.png';
+
+
+// import cooking from './images/fiction.png';
 // import medical from './images/Medical.png';
 // import selfhelp from './images/SelfHelp.jpg';
 
@@ -177,6 +189,72 @@ const Tab1: React.FC = () => {
                 <p><a type="text">
                 <img src={localStudy} alt="Local Study"/></a></p>
                 <p style={{textAlign: 'center', fontSize:10}}><b>Local Study</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 7------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={textbooks} alt="Textbooks"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Textbooks</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={languageExam} alt="Language Exam"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Language Exam</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={internationalExam} alt="International Exam"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>International Exam</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 8------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={fiction} alt="Fiction"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Fiction</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={nonFiction} alt="Non-Fiction"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Non-Fiction</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={chineseBook} alt="Chinese Books"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Chinese Books</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 9------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={japaneseBook} alt="Japanese Books"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Japanese Books</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={lifestyle} alt="Lifestyle"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Lifestyle</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={others} alt="Others"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Others</b></p>
               </div>
             </div>
 
