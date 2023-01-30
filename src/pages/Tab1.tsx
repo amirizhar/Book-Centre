@@ -19,6 +19,15 @@ import history from './images/History.png';
 import health from './images/HealthAndFitness.png';
 import sport from './images/Sport.png';
 
+import hobbies from './images/hobbies.png';
+import socialScience from './images/socialScience.png';
+import science from './images/science.png';
+
+import food from './images/food.png';
+import selfEnrichment from './images/self-enrichment.png';
+import localStudy from './images/localStudy.png';
+
+
 // import cooking from './images/Cooking.jpg';
 // import medical from './images/Medical.png';
 // import selfhelp from './images/SelfHelp.jpg';
@@ -132,20 +141,42 @@ const Tab1: React.FC = () => {
             <div className="row">
               <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
                 <p><a type="text">
-                <img src={history} alt="History & Politics"/></a></p>
-                <p style={{textAlign: 'center', fontSize:10}}><b>History & Politics</b></p>
+                <img src={hobbies} alt="Hobbies & Collectibles"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Hobbies & Collectibles</b></p>
               </div>
 
               <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
                 <p><a type="text">
-                <img src={health} alt="Health & Well-being"/></a></p>
-                <p style={{textAlign: 'center', fontSize:10}}><b>Health & Well-being</b></p>
+                <img src={socialScience} alt="Social Science"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Social Science</b></p>
               </div>
 
               <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
                 <p><a type="text">
-                <img src={sport} alt="Sport"/></a></p>
-                <p style={{textAlign: 'center', fontSize:10}}><b>Sport</b></p>
+                <img src={science} alt="Science"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Science</b></p>
+              </div>
+            </div>
+
+            {/* ------------------------------Row 6------------------------------------ */}
+
+            <div className="row">
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={food} alt="Food & Drink"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Food & Drink</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={selfEnrichment} alt="Self-Enrichment"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Self-Enrichment</b></p>
+              </div>
+
+              <div className="column" style={{textAlign: 'justify', margin: 20, justifyContent: 'center'}}>
+                <p><a type="text">
+                <img src={localStudy} alt="Local Study"/></a></p>
+                <p style={{textAlign: 'center', fontSize:10}}><b>Local Study</b></p>
               </div>
             </div>
 
