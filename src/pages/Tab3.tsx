@@ -1,10 +1,23 @@
 import { IonButton, IonCheckbox, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { text } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
+
+
+import { useState } from 'react';
+import { ref, set, update, onValue, remove, child, push } from "firebase/database";
+import { db } from '../components/Config';
+
+
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
+
+
+  const [username, setName] = useState('');
+  const [email, setEmail] = useState('');
+
   return (
+
     <IonPage>
       <IonHeader>
         <IonToolbar>
@@ -20,51 +33,42 @@ const Tab3: React.FC = () => {
 
         <form className="ion-padding">
           <IonItem>
+            <IonLabel position="floating">Username</IonLabel>
+            <IonInput value={username} onIonInput={(e: any) => setName(e.target.value)}/>
+          </IonItem>
+
+          <IonItem>
             <IonLabel position="floating">Email</IonLabel>
-            <IonInput type='email' />
+            <IonInput value={email} onIonInput={(e: any) => setEmail(e.target.value)} />
           </IonItem>
 
-          <IonItem>
-            <IonLabel position="floating">Store</IonLabel>
-            <IonInput type='email' disabled/>
-          </IonItem>
-
-          <IonItem>
-              {/* <IonLabel position="floating">Store</IonLabel> */}
-                <IonCheckbox slot="start"></IonCheckbox>
-                <IonLabel style={{textAlign: 'left'}}>MPH</IonLabel>
-              </IonItem>
-
-              <IonItem>
-              {/* <IonLabel position="floating">Store</IonLabel> */}
-                <IonCheckbox slot="start"></IonCheckbox>
-                <IonLabel style={{textAlign: 'left'}}>Kinokuniya</IonLabel>
-              </IonItem>
-
-              <IonItem>
-              {/* <IonLabel position="floating">Store</IonLabel> */}
-                <IonCheckbox slot="start"></IonCheckbox>
-                <IonLabel style={{textAlign: 'left'}}>Popular</IonLabel>
-              </IonItem>
-
-          <IonItem>
-            <IonLabel position="floating">Message</IonLabel>
-            <IonInput type="text" />
-          </IonItem>
-
-          {/* <IonItem lines="none">
-            <IonLabel>Remember me</IonLabel>
-            <IonCheckbox defaultChecked={true} slot="start" />
-          </IonItem> */}
-
-          <IonButton className="ion-margin-top" type="submit" expand="block">
-            Send
+          <IonButton className="ion-margin-top" onClick={createData} expand="block">
+            Login
           </IonButton>
         </form>
 
       </IonContent>
     </IonPage>
   );
+
+  function createData() {
+
+    // unique ID form firebase
+    const newKey = push(child(ref(db), 'contacts')).key;
+
+    set(ref(db, 'contacts/' + username), {
+      username: username,
+      email: email
+    }).then(() => {
+      // Data saved successfully!
+      alert('Your Message Sent To The Book Store!');
+    })
+      .catch((error) => {
+        // The write failed...
+        alert(error);
+      });
+  }
+
 };
 
 export default Tab3;
