@@ -54,7 +54,7 @@ const Tab3: React.FC = () => {
   function createData() {
 
     // unique ID form firebase
-    const newKey = push(child(ref(db), 'contacts')).key;
+    // const newKey = push(child(ref(db), 'contacts')).key;
 
     set(ref(db, 'contacts/' + username), {
       username: username,
