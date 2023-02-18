@@ -12,6 +12,16 @@ const Tab2: React.FC = () => {
   const [message, setMessage] = useState('');
   const [date, setDate] = useState('');
 
+  function readData() {
+    const starCountRef = ref(db, 'contacts/' + name);
+    onValue(starCountRef, (snapshot) => {
+      const data = snapshot.val();
+      setEmail(data.email);
+      setStore(data.store);
+      setMessage(data.message);
+    });
+  }
+
   return (
     <IonPage>
       <IonHeader>
@@ -30,43 +40,43 @@ const Tab2: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-            <form className="ion-padding">
-          <IonItem>
-            <IonLabel position="floating">Name</IonLabel>
-            <IonInput value={name} onIonInput={(e: any) => setName(e.target.value)} />
-          </IonItem>
+              <form className="ion-padding">
+                <IonItem>
+                  <IonLabel position="floating">Name</IonLabel>
+                  <IonInput value={name} onIonInput={(e: any) => setName(e.target.value)} />
+                </IonItem>
 
-          <IonItem>
-            <IonLabel position="floating">Email</IonLabel>
-            <IonInput type="email" value={email} onIonInput={(e: any) => setEmail(e.target.value)} />
-          </IonItem>
+                <IonItem>
+                  <IonLabel position="floating">Email</IonLabel>
+                  <IonInput type="email" value={email} onIonInput={(e: any) => setEmail(e.target.value)} />
+                </IonItem>
 
-          <IonItem>
-            <IonLabel position="floating">Bookstore</IonLabel>
-            <IonInput type="text" value={store} onIonInput={(e: any) => setStore(e.target.value)} />
+                <IonItem>
+                  <IonLabel position="floating">Bookstore</IonLabel>
+                  <IonInput type="text" value={store} onIonInput={(e: any) => setStore(e.target.value)} />
 
-            {/* <IonSelect onInput={(e: any) => setStore(e.target.value)}>
+                  {/* <IonSelect onInput={(e: any) => setStore(e.target.value)}>
               <IonSelectOption value='MPH' onInput={(e: any) => setStore(e.target.value)}>MPH</IonSelectOption>
               <IonSelectOption value='Kinokuniya' onInput={(e: any) => setStore(e.target.value)}>Kinokuniya</IonSelectOption>
               <IonSelectOption value='Popular' >Popular</IonSelectOption>
             </IonSelect> */}
-          </IonItem>
+                </IonItem>
 
-          <IonItem>
-            <IonLabel position="floating">Message</IonLabel>
-            <IonTextarea value={message} onIonInput={(e: any) => setMessage(e.target.value)} placeholder="Message to the bookstore"></IonTextarea>
-            {/* <IonInput type="text" value={message} onIonInput={(e: any) => setMessage(e.target.value)} /> */}
-          </IonItem>
+                <IonItem>
+                  <IonLabel position="floating">Message</IonLabel>
+                  <IonTextarea value={message} onIonInput={(e: any) => setMessage(e.target.value)} placeholder="Message to the bookstore"></IonTextarea>
+                  {/* <IonInput type="text" value={message} onIonInput={(e: any) => setMessage(e.target.value)} /> */}
+                </IonItem>
 
-          <IonItem hidden>
-            <IonLabel position="floating">Date</IonLabel>
-            <IonInput type="text" value={date} onIonInput={(e: any) => setDate(e.target.value)} />
-          </IonItem>
+                <IonItem hidden>
+                  <IonLabel position="floating">Date</IonLabel>
+                  <IonInput type="text" value={date} onIonInput={(e: any) => setDate(e.target.value)} />
+                </IonItem>
 
-          <IonButton className="ion-margin-top" onClick={readData} expand="block">
-            Get Data
-          </IonButton>
-        </form>
+                <IonButton className="ion-margin-top" onClick={readData} expand="block">
+                  Get Data
+                </IonButton>
+              </form>
             </IonCol>
             {/* <IonCol>2</IonCol>
             <IonCol>3</IonCol> */}
@@ -76,16 +86,6 @@ const Tab2: React.FC = () => {
       </IonContent>
     </IonPage>
   );
-
-  function readData() {
-    const starCountRef = ref(db, 'contacts/' + name);
-    onValue(starCountRef, (snapshot) => {
-      const data = snapshot.val();
-      setEmail(data.email);   
-      setStore(data.store);  
-      setMessage(data.message);  
-    });
-  }
 
 };
 
