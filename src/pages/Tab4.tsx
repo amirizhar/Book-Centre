@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab4.css';
 import header from './images/book1.jpeg';
+import {version} from 'react';
 
 const Tab3: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const Tab3: React.FC = () => {
         With the Online Book Centre, almost all information will be provided such as the book title, author name, summary of content and other information. Besides that, current available system on internet is also lack of interface design and not user friendly which somehow makes users feel not attracted to that website.
         In short, the purpose of this website is to create a better book searching system that has an attractive interface design which will facilitate users to obtain their requirements accordingly.
         </p>
-        <p><b>App Version: </b></p>
+        <p><b>App Version: </b>{version}</p>
 
         <p><b>Developer: </b></p>
       </IonContent>

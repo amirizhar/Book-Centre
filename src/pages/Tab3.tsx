@@ -66,6 +66,13 @@ const Tab3: React.FC = () => {
           </IonButton>
         </form>
 
+        {/* <p><b>Email: </b></p>
+        <p><b>MPH:</b> mph@app.com</p>
+        <hr></hr>
+        <p><b>Kinokuniya:</b> kinokuniya@app.com</p>
+        <hr></hr>
+        <p><b>Popular:</b> Popular@app.com</p> */}
+
       </IonContent>
     </IonPage>
   );
