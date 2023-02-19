@@ -18,13 +18,13 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Book Centre</IonTitle>
+          <IonTitle>Contact</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Book Centre</IonTitle>
+            <IonTitle size="large">Contact</IonTitle>
           </IonToolbar>
         </IonHeader>
 

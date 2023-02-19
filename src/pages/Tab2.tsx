@@ -1,4 +1,4 @@
-import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonTextarea, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonSearchbar, IonTextarea, IonTitle, IonToolbar } from '@ionic/react';
 import { onValue, ref, set } from 'firebase/database';
 import { useState } from 'react';
 import { db } from '../components/Config';
@@ -19,8 +19,11 @@ const Tab2: React.FC = () => {
       setEmail(data.email);
       setStore(data.store);
       setMessage(data.message);
+      setDate(data.datetime);
     });
   }
+
+  // Display all data from database
 
   return (
     <IonPage>
@@ -37,54 +40,56 @@ const Tab2: React.FC = () => {
         </IonHeader>
         {/* <ExploreContainer name="Tab 2 page" /> */}
 
+        <IonToolbar>
+          <form>
+            <IonSearchbar value={name} onIonInput={(e: any) => setName(e.target.value)} placeholder="ISBN or Book Name">
+              <IonButton onClick={readData} expand="block">
+                Search
+              </IonButton>
+            </IonSearchbar>
+          </form>
+        </IonToolbar>
+
         <IonGrid>
           <IonRow>
             <IonCol>
-              <form className="ion-padding">
-                <IonItem>
-                  <IonLabel position="floating">Name</IonLabel>
-                  <IonInput value={name} onIonInput={(e: any) => setName(e.target.value)} />
-                </IonItem>
-
-                <IonItem>
-                  <IonLabel position="floating">Email</IonLabel>
-                  <IonInput type="email" value={email} onIonInput={(e: any) => setEmail(e.target.value)} />
-                </IonItem>
-
-                <IonItem>
-                  <IonLabel position="floating">Bookstore</IonLabel>
-                  <IonInput type="text" value={store} onIonInput={(e: any) => setStore(e.target.value)} />
-
-                  {/* <IonSelect onInput={(e: any) => setStore(e.target.value)}>
-              <IonSelectOption value='MPH' onInput={(e: any) => setStore(e.target.value)}>MPH</IonSelectOption>
-              <IonSelectOption value='Kinokuniya' onInput={(e: any) => setStore(e.target.value)}>Kinokuniya</IonSelectOption>
-              <IonSelectOption value='Popular' >Popular</IonSelectOption>
-            </IonSelect> */}
-                </IonItem>
-
-                <IonItem>
-                  <IonLabel position="floating">Message</IonLabel>
-                  <IonTextarea value={message} onIonInput={(e: any) => setMessage(e.target.value)} placeholder="Message to the bookstore"></IonTextarea>
-                  {/* <IonInput type="text" value={message} onIonInput={(e: any) => setMessage(e.target.value)} /> */}
-                </IonItem>
-
-                <IonItem hidden>
-                  <IonLabel position="floating">Date</IonLabel>
-                  <IonInput type="text" value={date} onIonInput={(e: any) => setDate(e.target.value)} />
-                </IonItem>
-
-                <IonButton className="ion-margin-top" onClick={readData} expand="block">
-                  Get Data
-                </IonButton>
-              </form>
+              <p>{email}</p>
+              <p>{store}</p>
+              <p>{message}</p>
+              <p>{name}</p>
+              <p>{date}</p>
             </IonCol>
-            {/* <IonCol>2</IonCol>
-            <IonCol>3</IonCol> */}
+
+            <IonCol>
+              <p>{email}</p>
+              <p>{store}</p>
+              <p>{message}</p>
+              <p>{name}</p>
+              <p>{date}</p>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol>
+              <p>{email}</p>
+              <p>{store}</p>
+              <p>{message}</p>
+              <p>{name}</p>
+              <p>{date}</p>
+            </IonCol>
+
+            <IonCol>
+              <p>{email}</p>
+              <p>{store}</p>
+              <p>{message}</p>
+              <p>{name}</p>
+              <p>{date}</p>
+            </IonCol>
           </IonRow>
         </IonGrid>
 
       </IonContent>
-    </IonPage>
+    </IonPage >
   );
 
 };
